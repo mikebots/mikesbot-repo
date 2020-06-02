@@ -1,4 +1,4 @@
-const {MessageEmbed} = require("discord.js")
+/* const {MessageEmbed} = require("discord.js")
 const ms = require("ms")
 const {saveGiveaway, scheduleGiveaways} = require('../../utils/structures/giveaway')
 
@@ -113,4 +113,4 @@ async function getResponses(message) {
         }
     }
     return responses;
-}
+}*/
