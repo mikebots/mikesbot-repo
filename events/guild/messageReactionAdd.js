@@ -1,4 +1,4 @@
-const MessageModel = require('../../database/model/message');
+/*const MessageModel = require('../../database/model/message');
 let addMemberRole = (emojiRoleMappings, reaction, user) => {
         
         if(emojiRoleMappings.hasOwnProperty(reaction.emoji.id)) {
@@ -34,4 +34,4 @@ module.exports = async (client, reaction, user) => {
         if(user.bot) return;
         addMemberRole(emojiRoleMappings, reaction, user);
     }
-}
+}*/
