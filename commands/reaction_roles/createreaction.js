@@ -1,4 +1,4 @@
-const { MessageCollector } = require("discord.js")
+/*const { MessageCollector } = require("discord.js")
 const MessageModel = require('../../database/model/message')
 let msgCollectorFilter = (newMsg, originalMsg) => newMsg.author.id === originalMsg.author.id;
  
@@ -110,4 +110,4 @@ module.exports = {
             }
          
     }
-}
+}*/
