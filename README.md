@@ -27,7 +27,7 @@ ________________________________
 
 # REQUIREMENTS UPDATED
 You now have to make a file under this package and name it ".env" Add this to the file
-Copy the [.env example file](https://https://github.com/mikebots/mikesbot-repo/edit/master/.env_example)
+Copy the [.env example file](https://https://github.com/mikebots/mikesbot-repo/blob/master/.env_example)
 And change the name to **.env**
 After configurating your bot you can make a file called start.bat and type this in **node .**
 
