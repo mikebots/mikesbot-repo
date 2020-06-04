@@ -2,11 +2,11 @@ const {MessageEmbed} = require('discord.js')
 var db = require(`quick.db`)
 const {formatDate} = require("../../functions.js")
 module.exports={
-    name: "ban",
-    aliases: ['b'],
-    description: "ban a mentioned user or their id",
+    name: "kick",
+    aliases: ['k', 'kic'],
+    description: "Kick a mentioned user or their id",
     category: "moderation",
-    usage: `ban <User ID> (reason)`,
+    usage: `kick <User ID> (reason)`,
     run: async(bot,message,args)=>{
       if(!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send(`You need the kick members permission in order to execute this command.`)
       if(!message.guild.me.permissions.has("KICK_MEMBERS")) return message.channel.send("I need the kick members permission in order to execute this command!")
