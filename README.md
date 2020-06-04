@@ -80,7 +80,7 @@ Remember this is a basic discord bot. Feel free to add commands!
 
 If you want to start the bot then type npm start or npm run dev in the terminal
 
-Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands with a checkamark on them. And the terminal saying 
+Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands with a checkmark on them. And the terminal saying 
 ```js
 (Bot tag) is now online and has loaded (total commands) commands
 Bot prefix is (bot prefix)
