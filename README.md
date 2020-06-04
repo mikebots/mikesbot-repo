@@ -89,3 +89,5 @@ Run (bot prefix)help to get started
 # Support
 - Join our [Support Server](https://discord.gg/Be2AkYQ)
 
+# Contributing
+- Make a pull request if you want to contribute!
