@@ -6,7 +6,7 @@ module.exports= (bot)=>{
         for(let file of commands){
             let command = require(`../commands/${dir}/${file}`);
             if(command.name){
-                bot.commands.set(pull.name, pull)
+                bot.commands.set(command.name, command)
                 console.log(`${command.name} has loaded`)
             
                 
