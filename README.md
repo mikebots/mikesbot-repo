@@ -28,16 +28,15 @@ ________________________________
 # REQUIREMENTS UPDATED
 You now have to make a file under this package and name it ".env" Add this to the file
 
-BOT_TOKEN=REPLACEWITHBOTTOKEN
+- BOT_TOKEN=REPLACEWITHBOTTOKEN
 
 
-PREFIX=REPLACEWITHBOTPREFIX
+- PREFIX=REPLACEWITHBOTPREFIX
 
-_____________________________________________________________________________________________________
 
-After configurating your bot you can make a file called start.bat and type this in 
 
-___________________________________________________________
+After configurating your bot you can make a file called start.bat and type this in **node .**
+
 
 # Setting Up The Bot
 First off: In order to get dependencies on your bot you must go to your terminal. If you want the Visual Studios Code terminal simply press new terminal.
@@ -48,7 +47,7 @@ Note: This may take a while so be patient!
 This will install all the bot dependencies! If you have any errors make sure to cd into the bot folder!
 
 
-**1: Configurating your bot!**
+- **1: Configurating your bot!**
 
 First off go to the config.json folder, then replace the "token" var with your bot token. If you don't know where it is go to the [discord developers portal](https://discordapp.com/developers/applications/me).
 Go to your application
@@ -77,11 +76,11 @@ After that you have configurated your bot!
 
 
 
-**2: Customizing**
+- **2: Customizing**
 
 I suggest ignoring this if you aren't as experienced at coding but if you are. You can edit the embeds and commands etc on the code
 
-Status: You can change your bot status in index.js
+Status: You can change your bot status [here](https://github.com/mikebots/mikesbot-repo/edit/master/events/client/ready.js)
 
 Here are the type of games you can use: 
 "WATCHING" your status would be Watching (the status). 
@@ -95,7 +94,7 @@ Remember this is a basic discord bot. Feel free to add commands!
 
 
 
-**3: Starting the bot**
+- **3: Starting the bot**
 
 
 
