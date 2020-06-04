@@ -11,17 +11,15 @@ This repository has moderation, fun, misc, and music commands.
 - Fixed the delete role command
 - Added Casing and Fixed the Kick Command
 
-- Added a poll command. Usage: 
+- Added a timedpoll command.
+Usage: 
 ```js
-(prefix)poll <mentioned channel | channel id> <question>
+(prefix)timedpoll <time> <mentioned channel | channel id> <question>
 ```
 
-If you use a channel id to initiate a poll the question needs to be longer than 3 characters and it removes the 3 characters from the question. Doesn't apply if you use a mentioned channel.*/
-
-
-
-
-Reasons aren't mandetory when banning/kicking a user. If there isn't a reason then it will just state no reason specified as the reason.
+- Reasons aren't mandetory when banning/kicking a user. If there isn't a reason then it will just state no reason specified as the reason.
+- Fixed The Bot Lag
+- Added Music (Under Work)
 
 ________________________________
 
