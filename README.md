@@ -47,28 +47,11 @@ First off go to the config.json folder, then replace the "token" var with your b
 Go to your application
 Press "Bot"
 Then press copy onto where it says token
-Paste it onto where it says "REPLACE WITH BOT TOKEN" on config.json
-
-
-If you don't know how to create a bot. Go to the developer portal I sent and press "New Application". Then put your bot name onto where it says "Name". Ignore the team stuff that is for more advanced users. 
-Next put a bot description("Not needed just a preference) and a bot icon(Your bot's profile picture)
-Then under settings press "Bot".
-Click Add Bot
-Click Yes do it
-Then under token press copy. 
-Paste it onto where it says "REPLACE WITH BOT TOKEN" on the config.json file
-
-NOTE: Do not reveal your bot token to anyone!! This is basically your bot's password. If anyone can get to it then they could messs with your bot! Keep it hidden in the config.json file.
-
-After you've pasted the bot token you need to add you bot prefix.
-
-A bot prefix is the character or command a person has to type before executing a command. For example my bot prefix is "." So for the ban command I have to type .ban (user id). If my prefix were to change to ? then i'd have to type ?ban (user id)
-
-Paste the prefix onto where it says "REPLACE WITH BOT PREFIX" on the config.json file.
-
-After that you have configurated your bot!
-
-
+After setting up the bot go to your .env file and type in
+```js
+BOT_TOKEN= Put the  Bot Token
+PREFIX= Bot Prefix
+```
 
 - **2: Customizing**
 
@@ -97,7 +80,13 @@ Remember this is a basic discord bot. Feel free to add commands!
 
 If you want to start the bot then type npm start or npm run dev in the terminal
 
-Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands witha checkamrk on them. And the terminal saying **(your bot name) is now online! Run (your bot prefix)help for any commands help**
+Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands witha checkamrk on them. And the terminal saying 
+```js
+(Bot tag) is now online and has loaded (total commands) commands
+Bot prefix is (bot prefix)
+Bot ping is (bot ping)
+Run (bot prefix)help to get started
+```
 
 # Support
 - Join our [Support Server](https://discord.gg/Be2AkYQ)
