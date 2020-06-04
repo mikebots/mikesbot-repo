@@ -49,8 +49,8 @@ Press "Bot"
 Then press copy onto where it says token
 After setting up the bot go to your .env file and type in
 ```js
-BOT_TOKEN= Put the  Bot Token
-PREFIX= Bot Prefix
+BOT_TOKEN=Put_the_Bot Token
+PREFIX=Bot_Prefix
 ```
 
 - **2: Customizing**
