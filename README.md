@@ -98,8 +98,7 @@ Remember this is a basic discord bot. Feel free to add commands!
 If you want to start the bot then type npm start or npm run dev in the terminal
 
 Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands witha checkamrk on them. And the terminal saying **(your bot name) is now online! Run (your bot prefix)help for any commands help**
-<<<<<<< HEAD
-*/
+
 # Support
 - Join our [Support Server](https://discord.gg/Be2AkYQ)
 
