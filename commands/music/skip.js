@@ -1,7 +1,7 @@
 module.exports = {
     name: "skip",
     description:"Skip a song",
-    aliases: ['s', 'ski', 'remove'],
+    aliases: ['ski', 'remove'],
     usage: "[p]skip",
     category: "music",
     run: async(bot, message, args) => {
