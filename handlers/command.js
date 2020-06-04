@@ -13,6 +13,7 @@ module.exports= (bot)=>{
                 
             if(command.aliases && Array.isArray(command.aliases)) command.aliases.forEach(alias => bot.aliases.set(alias, command.name))
         }
+            }
     
     
 }
