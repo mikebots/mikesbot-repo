@@ -5,11 +5,13 @@ Welcome to Mike's Git Repository!
 Welcome to Mike's git repository!
 >>>>>>>
 
-Updates: 
-Version: 1.0.4
-Fixed: Double texting bug, removed "link" field on the advertisement command. 
-Fixed the delete role command
-Added a poll command. Usage: 
+# Updates
+ - Version: 1.0.4
+- Fixed: Double texting bug, removed "link" field on the advertisement command. 
+- Fixed the delete role command
+- Added Casing and Fixed the Kick Command
+
+- Added a poll command. Usage: 
 ```js
 (prefix)poll <mentioned channel | channel id> <question>
 ```
@@ -23,7 +25,8 @@ Reasons aren't mandetory when banning/kicking a user. If there isn't a reason th
 
 ________________________________
 
-REQUIREMENTS UPDATED: You now have to make a file under this package and name it ".env" Add this to the file
+# REQUIREMENTS UPDATED
+You now have to make a file under this package and name it ".env" Add this to the file
 
 BOT_TOKEN=REPLACEWITHBOTTOKEN
 
@@ -36,7 +39,8 @@ After configurating your bot you can make a file called start.bat and type this 
 
 ___________________________________________________________
 
-First off: In order to get dependencies on your bot you must go to your terminal or type ctrl + ` if you want the Visual Studios Code terminal
+# Setting Up The Bot
+First off: In order to get dependencies on your bot you must go to your terminal. If you want the Visual Studios Code terminal simply press new terminal.
 Then you want to type: npm install and press enter
 
 Note: This may take a while so be patient!
@@ -44,7 +48,7 @@ Note: This may take a while so be patient!
 This will install all the bot dependencies! If you have any errors make sure to cd into the bot folder!
 
 
-1: Configurating your bot!
+**1: Configurating your bot!**
 
 First off go to the config.json folder, then replace the "token" var with your bot token. If you don't know where it is go to the discord developers portal at: https://discordapp.com/developers/applications/me.
 Go to your application
@@ -73,7 +77,7 @@ After that you have configurated your bot!
 
 
 
-2: Customizing
+**2: Customizing**
 
 I suggest ignoring this if you aren't as experienced at coding but if you are. You can edit the embeds and commands etc on the code
 
@@ -91,7 +95,7 @@ Remember this is a basic discord bot. Feel free to add commands!
 
 
 
-3: Starting the bot
+**3: Starting the bot**
 
 
 
