@@ -50,7 +50,7 @@ This will install all the bot dependencies! If you have any errors make sure to 
 
 **1: Configurating your bot!**
 
-First off go to the config.json folder, then replace the "token" var with your bot token. If you don't know where it is go to the discord developers portal at: https://discordapp.com/developers/applications/me.
+First off go to the config.json folder, then replace the "token" var with your bot token. If you don't know where it is go to the [discord developers portal](https://discordapp.com/developers/applications/me).
 Go to your application
 Press "Bot"
 Then press copy onto where it says token
@@ -104,6 +104,5 @@ If you want to start the bot then type npm start or npm run dev in the terminal
 Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands witha checkamrk on them. And the terminal saying **(your bot name) is now online! Run (your bot prefix)help for any commands help**
 <<<<<<< HEAD
 */
-```
-=======
->>>>>>> 9b6d282e4971b242524d845a8904044a24918fcd
+
+
