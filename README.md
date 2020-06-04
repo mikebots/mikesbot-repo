@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 
 Welcome to Mike's Git Repository!
 =======
-Welcome to Mike's git repository!
->>>>>>>
+Welcome to Mike's git repository! The official repository for Mike's Premium Bot.
+This repository has moderation, fun, misc, and music commands.
+
 
 # Updates
  - Version: 1.0.4
@@ -27,14 +27,8 @@ ________________________________
 
 # REQUIREMENTS UPDATED
 You now have to make a file under this package and name it ".env" Add this to the file
-
-- BOT_TOKEN=REPLACEWITHBOTTOKEN
-
-
-- PREFIX=REPLACEWITHBOTPREFIX
-
-
-
+Copy the [.env example file](https://https://github.com/mikebots/mikesbot-repo/edit/master/.env_example)
+And change the name to **.env**
 After configurating your bot you can make a file called start.bat and type this in **node .**
 
 
@@ -83,10 +77,13 @@ I suggest ignoring this if you aren't as experienced at coding but if you are. Y
 Status: You can change your bot status [here](https://github.com/mikebots/mikesbot-repo/edit/master/events/client/ready.js)
 
 Here are the type of games you can use: 
-"WATCHING" your status would be Watching (the status). 
-"LISTENING" your status would be Listening to (your bot status). 
-"STREAMING" your status would be Streaming (bot status). 
-"PLAYING" your bot status would be Playing (bot status)
+- "WATCHING" your status would be Watching (the status). 
+- "LISTENING" your status would be Listening to (your bot status). 
+- "STREAMING" your status would be Streaming (bot status). 
+- "PLAYING" your bot status would be Playing (bot status)
+```js
+bot.user.setActivity(`Your Activity Name`, { type: "The Types"})
+```
 
 Remember this is a basic discord bot. Feel free to add commands!
 
@@ -103,5 +100,6 @@ If you want to start the bot then type npm start or npm run dev in the terminal
 Or you can double click the start.bat file on your pc. Once it's ready you'll see an array of you bot commands witha checkamrk on them. And the terminal saying **(your bot name) is now online! Run (your bot prefix)help for any commands help**
 <<<<<<< HEAD
 */
-
+# Support
+- Join our [Support Server](https://discord.gg/Be2AkYQ)
 
