@@ -40,7 +40,7 @@ module.exports={
           avatarURL: User.user.displayAvatarURL()
         })
        
-       User.ban(`Case #${Case}`)
+       User.kick(`Case #${Case}`)
        message.channel.send(`Case \`${Case}\` ${User.user.tag} was kicked.`)
        
        
