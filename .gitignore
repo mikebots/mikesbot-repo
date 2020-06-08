@@ -1,3 +1,8 @@
 node_modules
 config.json
 .env
+json.sqlite
+Procfile
+.npmignore
+EmbedClass.js
+config.json
