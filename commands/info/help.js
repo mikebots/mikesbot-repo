@@ -20,6 +20,7 @@ module.exports = {
                 .setTitle(`Help Panel`)
                 .setDescription(`\`\`\`${categories}\`\`\``)
                 .setColor("RANDOM")
+                .setThumbnail(message.author.displayAvatarURL())
                 .setFooter(`Try ${prefix}help [category] to get more info on a category`, message.author.displayAvatarURL({ dynamic: true}))
             return message.channel.send(embed)
 

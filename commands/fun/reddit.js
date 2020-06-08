@@ -22,7 +22,7 @@ module.exports={
             message.channel.send("`Image not appearing? Click the link!`")
         }catch(err){
             console.log(err)
-            return message.channel.send(`Oops looks like an error occured! \`${err}\` `)
+            return message.channel.send(`Looks like our api could not find that subreddit!`)
         }
     }
 }

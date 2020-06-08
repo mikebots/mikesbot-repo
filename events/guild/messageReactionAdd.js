@@ -1,6 +1,6 @@
 const MessageModel = require('../../database/model/message');
 let addMemberRole = (emojiRoleMappings, reaction, user) => {
-        
+        if(!emojiRoleMappings) return;
         if(emojiRoleMappings.hasOwnProperty(reaction.emoji.id)) {
             let roleId = emojiRoleMappings[reaction.emoji.id];
             let role = reaction.message.guild.roles.cache.get(roleId);

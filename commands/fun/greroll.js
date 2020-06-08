@@ -14,7 +14,7 @@ module.exports = {
         if(!message.member.permissions.has("MANAGE_GUILD")&&!message.member.roles.cache.has(giveRole.id)) return message.channel.send(`You must be able to manage the guild or have a role called Giveaways in order to reroll a giveaway!.`)
         var bed = await message.channel.messages.fetch(args[0])
 
-        if(bed.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).size == 0){
+        if(bed.reactions.cache.get("🎉").users.cache.filter(u=>!u.bot).size < 0){
             message.channel.send(`There isn\'t a giveaway or reactions in that message.`)
             return;
         }

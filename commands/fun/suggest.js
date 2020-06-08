@@ -19,9 +19,9 @@ module.exports = {//Command Configuration
         var embed = new MessageEmbed()
             
             .setDescription(args.join(" "))
-            .setColor("YELLOW")
+            .setColor("RANDOM")
             .setFooter(`User ID: ${message.author.id} | Powered by Mike H.`)
-            .setTimestamp()
+           
         
         let m = await webhook.send({
             username: message.author.username,
@@ -29,9 +29,9 @@ module.exports = {//Command Configuration
             embeds: [embed]
         })
         channel.messages.fetch(m.id).then(m=>{
-        m.react("🟢")
-        m.react("🟠")
-        m.react("🔴")
+        m.react("656968927192285195")
+        m.react("717980176796876861")
+        
         })
         message.channel.send(`Your suggestion is now being voted on at <#${channel.id}>.`)
         message.delete()

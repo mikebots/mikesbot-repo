@@ -15,7 +15,7 @@ module.exports = {
        
         var time = args[1]
         var Reason = args.slice(2).join(" ")
-       
+       const reason = Reason;
         if(User.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`This user has a higher/equal to role than you!`)
          if(isNaN(args[1][0])) time = "1h";
          //if(!args[1].endsWith("d")&&!args[1].endsWith("w")&&!args[1],endsWith("s")&&!args[1].endsWith("m")&&!args[1].endsWith("h")) return message.channel.send(`That isn\'t a correct time! Try again using formats like "1d" or "3s" etc.`)

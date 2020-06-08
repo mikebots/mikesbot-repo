@@ -5,6 +5,7 @@ module.exports={
     aliases: ['slowm', 'sm'],
     usage: "slowmode <number> every number is a second don't use terms like 1s or 1h instead use 60 for 1 minute etc.",
     run: async(bot,message,args)=>{
+        if(!message.member.permissions.has("MANAGE_CHANNELS")) return message.channel.send(`You need the manage channels permission in order to use this command.`)
         if(!args[0])return message.channel.send(`You did not specify the time in seconds you wish to set this channel's slow mode too!`)
         if(isNaN(args[0]))return message.channel.send(`That is not a number.`)
         let reason = args.slice(1).join(" ")
