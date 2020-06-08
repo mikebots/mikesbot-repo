@@ -49,7 +49,7 @@ module.exports = {
             .setURL(song.url)
             .setDescription(`Now Playing - [${song.title}](${song.url})`)
             .setColor("RANDOM")
-            .setThumbnail(song.url)
+            
       queue.textChannel.send(embed)
       
     

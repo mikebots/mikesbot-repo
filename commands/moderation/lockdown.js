@@ -6,8 +6,10 @@ module.exports = {
     description: "Lockdown your server to prevent raids!",
     category: "moderation",
     aliases: ['lock', 'server-lockdown'],
+    timeout: 600000,
     run: async(bot, message, args)=>{
         if(!message.member.permissions.has(["MANAGE_CHANNELS", "MANAGE_ROLES", "MANAGE_GUILD"])) return message.channel.send(`You need the manage channels,roles and server permission in order to use this command.`)
+         if(!message.guild.me.permissions.has(["MANAGE_CHANNELS", "MANAGE_ROLES", "MANAGE_GUILD"])) return message.channel.send(`I need the manage channels,roles and server permission in order to use this command.`)
 
         if(!args[0]) return message.channel.send(`Please specify an option: **true** or **false**, or a role and option: **role id/name** **True** or **false**.`);
 

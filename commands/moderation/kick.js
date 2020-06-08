@@ -1,63 +1,48 @@
 const {MessageEmbed} = require('discord.js')
-
-const db = require("quick.db")
+var db = require(`quick.db`)
+const {formatDate} = require("../../functions.js")
 module.exports={
     name: "kick",
+    aliases: ['k', 'kic'],
     description: "Kick a mentioned user or their id",
     category: "moderation",
-    aliases: ['k', 'kic'],
-    usage: "[p]kick <User ID, Tag, Mention> (reason)",
-    aliases: ['k'],
+    usage: `kick <User ID> (reason)`,
     run: async(bot,message,args)=>{
-        if(!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send(`\`Error 401(Unauthorized)\` Looks like you need the kick members permission.`)
-       if(!args[0])return message.channel.send(`\`Error 400(Bad Request Error)\`Invalid Command Usage: Try\n \`\`${bot.prefix}kick <User ID> (reason)\n\`\`" `) 
-       let User = message.mentions.members.filter(m=>m.user.id !== bot.user.id).first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(u => u.tag === args[0])
-       if(typeof User == "undefined")return message.channel.send("`Error 404(Not Found)` Error while trying to find the user/user id. Please try again.")
-       let Reason =  args.slice(1).join(" ")
-       if(!args[1]) Reason = "No reason specified";
-       if(User.user.id == message.member.id){
-           message.channel.send(`\`Error 401(Unauthorized)\` You are unable to do that`)
-           return;
-       }
-       if(User.roles.highest.position > message.member.roles.highest.position&& message.member.id !== message.guild.ownerID){
-           message.channel.send(`This user has a higher role than you I cannot kick them.`)
-           return;
-       }
-       if(!User.kickable){
-           message.channel.send(`\`Error 403(Forbidden)\` I am unable to kick this member.`)
-           return;
-       }
-       try{
-        var adder = 1
-        var totsInf = db.get(`totalInf_${message.guild.id}`) || 0;
-        var Case = 1 + totsInf;
-        db.add(`totalInf_${message.guild.id}`, 1)
-        let guildBans = new Object()
-        guildBans[Case] = [];
-        guildBans["type"] = [];
-        guildBans[`${Case}-User`] = [];
-        guildBans[`${Case}-Date`] = []; //"[some text here](url)"
-        guildBans["type"].push(`Punishment: Kick`)
-        guildBans[`${Case}-User`].push(`${User.user.id}(${User.toString()})\n${User.user.tag}`)
-        
-        guildBans[Case].push(`**Action:** Kick\n**Reason: ${Reason}**\n`)
-        guildBans[Case].push(`**Moderator:** ${message.member.id}(${message.member.toString()})\n${message.author.tag}\n`)
+      if(!message.member.permissions.has("KICK_MEMBERS")) return message.channel.send(`You need the kick members permission in order to execute this command.`)
+      if(!message.guild.me.permissions.has("KICK_MEMBERS")) return message.channel.send("I need the kick members permission in order to execute this command!")
+      
+       if(!args[0])return message.channel.send(`Invalid Command Usage: Try\n[p]kick <User ID, mention> (reason)`) 
+       let User = message.mentions.members.filter(m => m.user.id !== bot.user.id).first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(u => u.user.tag === args[0])
+
+      
+
        
-        guildBans[`${Case}-Date`].push(`${Date.now()}`)
-        db.set(`action_${message.guild.id}_#${Case}`, "Kick")
-        db.set(`cases_${message.guild.id}_#${Case}`, guildBans[Case])
-        db.set(`avt_${message.guild.id}_#${Case}`, User.user.displayAvatarURL())
-        db.set(`casedate_${message.guild.id}_#${Case}`, Date.now())
-        db.set(`caseuser_${message.guild.id}_#${Case}`, guildBans[`${Case}-User`])
-        User.send(`Case \`#${Case}\` you were kicked, ${Reason}`)
+       if(!User)return message.channel.send("Error while trying to find the user/user id. Please try again.")
+       let Reason = args.slice(1).join(" ") 
+       if(!args[1]) Reason = "No reason specified";
+       if(User.roles.highest.position >= message.member.roles.highest.position) return message.channel.send(`This user has a higher/equal to role than you I cannot kick them!`)
+      if(!User.kickable)return message.channel.send("Error while trying to kick the user. Check to see if it's a valid user id, if the user is in the guild, or if the user has a higher role.")
+       
+      var totsInf = db.get(`totalInf_${message.guild.id}`) || 0;
+      var Case = 1 + totsInf;
+      db.add(`totalInf_${message.guild.id}`, 1)
+      
+      User.send(`Case \`${Case}\` , you were kicked in ${message.guild.name}(${message.guild.id})`).catch(err=>console.log(err));
+        db.set(`action_${message.guild.id}_#${Case}`, "Ban")
+        db.set(`cases_${message.guild.id}_#${Case}`,{
+          moderator: message.author,
+          reason: Reason,
+          date: Date.now(),
+          user: User.user,
+   
+          case: Case,
+          action: "Kick",
+          avatarURL: User.user.displayAvatarURL()
+        })
+       
        User.kick(`Case #${Case}`)
-       message.channel.send(`Case \`#${Case}\` ${User.user.tag} was kicked.`)
-        
-
-       }catch(err){
-           console.log(err)
-           message.channel.send(`Oops seems like an error has occured. \`${err}\``)
-       }
-
-    }
-}
+       message.channel.send(`Case \`${Case}\` ${User.user.tag} was kicked.`)
+       
+       
+       //You can customize this as much as you'd like
+}}
