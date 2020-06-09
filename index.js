@@ -23,7 +23,7 @@ bot.categories = fs.readdirSync("./commands/");
 ["command","event"].forEach(handler=>{
     require(`./handlers/${handler}`)(bot);
 });
-await bot.login(process.env.BOT_TOKEN)
+ bot.login(process.env.BOT_TOKEN)
 
 
 
