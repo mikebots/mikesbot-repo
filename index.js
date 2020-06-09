@@ -12,10 +12,10 @@ const bot = new Client({
     partials: ['MESSAGE', 'REACTION']
 });
 const prefix = process.env.PREFIX;
-const database = require('./database/database')
+
 const db = require("quick.db");
 (async ()=>{
-await database;
+
 
 bot.commands = new Collection();
 bot.queue = new Map();
