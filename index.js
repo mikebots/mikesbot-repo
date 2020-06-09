@@ -11,10 +11,8 @@ const fs = require('fs');
 const bot = new Client({
     partials: ['MESSAGE', 'REACTION']
 });
-const prefix = process.env.PREFIX;
+;
 
-const db = require("quick.db");
-(async ()=>{
 
 
 bot.commands = new Collection();
@@ -26,8 +24,6 @@ bot.categories = fs.readdirSync("./commands/");
     require(`./handlers/${handler}`)(bot);
 });
 await bot.login(process.env.BOT_TOKEN)
-})();
-
 
 
 
