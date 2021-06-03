@@ -24,7 +24,7 @@
     "imageapi.js": "^1.0.3",
     "mongoose": "^5.9.16",
     "ms": "^2.1.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "node-schedule": "^1.3.2",
     "path": "^0.12.7",
     "quick.db": "^7.1.1",
